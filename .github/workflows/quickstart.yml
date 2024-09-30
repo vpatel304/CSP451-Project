@@ -1,0 +1,24 @@
+name: Quickstart Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - feat-body-text
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print Message
+        run: echo "Quickstart GitHub Actions"
+
+      - name: Show Working Directory
+        run: pwd
+
+      - name: Show Repository URL
+        run: echo "Repository URL: ${{ github.repository_url }}"
+
